@@ -1,0 +1,45 @@
+{
+  "name": "hash-regex",
+  "version": "1.0.0",
+  "description": "Converts an array of strings to a regular expression of hashtags",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radiovisual/hash-regex"
+  },
+  "author": {
+    "name": "Michael Wuergler",
+    "email": "senjudev@gmail.com",
+    "url": "http://numetriclabs.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radiovisual/hash-regex/issues"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "hashtag",
+    "regex",
+    "regular",
+    "expression",
+    "array",
+    "convert",
+    "change",
+    "strings",
+    "hash",
+    "tag",
+    "modify",
+    "output"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "^0.12.1"
+  }
+}

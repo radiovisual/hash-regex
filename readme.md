@@ -1,0 +1,48 @@
+# hash-regex [![Build Status](https://travis-ci.org/radiovisual/hash-regex.svg?branch=master)](https://travis-ci.org/radiovisual/hash-regex)
+
+> Converts an array of strings to a regular expression of hashtags
+
+
+## Install
+
+```
+$ npm install --save hash-regex
+```
+
+## Usage
+
+```js
+const hashRegEx = require('hash-regex');
+
+const regEx1 = hashRegEx(['one','two','three']);
+//=> /#one|#two|#three/gi
+
+// strings can have a hash sign, or not. Override the default flags
+const regEx2 = hashRegEx(['#withhash','withouthash'], {flags:'m'});
+//=> /#withhash|#withouthash/m
+```
+
+## API
+
+### hashRegEx(array,[options])
+
+#### array
+
+Type: `Array`<br>
+Required
+
+The array of strings you want to convert to a RegExp of hashes. Strings can begin with hash or not. 
+
+
+#### options
+
+##### flags
+
+Type: `String`<br>
+Default: `gi`
+
+The [RegExp flags](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/RegExp) you want to use.
+
+## License
+
+MIT © [Michael Wuergler](https://github.com/radiovisual)
