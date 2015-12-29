@@ -14,17 +14,21 @@ $ npm install --save hash-regex
 ```js
 const hashRegEx = require('hash-regex');
 
-const regEx1 = hashRegEx(['one','two','three']);
-//=> /#one|#two|#three/gi
+const regEx1 = hashRegEx(['foo','bar','baz']);
+//=> /#foo|#bar|#baz/gi
 
-// strings can have a hash sign, or not. Override the default flags
-const regEx2 = hashRegEx(['#withhash','withouthash'], {flags:'m'});
-//=> /#withhash|#withouthash/m
+// Strings can have a hash sign, or not.
+ const regEx2 = hashRegEx(['#withhash','withouthash']);
+//=> /#withhash|#withouthash/gi
+ 
+// The 'flags' option can override the default flags
+const regEx3 = hashRegEx(['foo','bar'], {flags:'m'});
+//=> /#foo|#bar/m
 ```
 
 ## API
 
-### hashRegEx(array,[options])
+### hashRegEx(array, [options])
 
 #### array
 
@@ -32,7 +36,6 @@ Type: `Array`<br>
 Required
 
 The array of strings you want to convert to a RegExp of hashes. Strings can begin with hash or not. 
-
 
 #### options
 
