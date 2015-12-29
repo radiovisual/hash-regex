@@ -9,8 +9,8 @@ module.exports = function (arr, options) {
 	options.flags = options.flags || 'gi';
 
 	var str = '';
-	arr.map((item, index) => {
-		const hash = item.substring(0, 1) === '#' ? '' : '#';
+	arr.map(function (item, index) {
+		var hash = item.substring(0, 1) === '#' ? '' : '#';
 		str += `${hash}${item}`;
 
 		if (index !== arr.length - 1) {
