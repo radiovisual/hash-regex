@@ -10,8 +10,8 @@ module.exports = function (arr, options) {
 
 	var str = '';
 	arr.map(function (item, index) {
-		var hash = item.substring(0, 1) === '#' ? '' : '#';
-		str += `${hash}${item}`;
+		str += item.substring(0, 1) === '#' ? '' : '#';
+		str += item;
 
 		if (index !== arr.length - 1) {
 			str += '|';
